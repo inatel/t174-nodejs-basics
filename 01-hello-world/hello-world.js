@@ -1,2 +1,2 @@
-const name = 'Bardock';
+const name = process.argv[2] || 'no name';
 console.log(`Hello ${ name }, welcome!`);
