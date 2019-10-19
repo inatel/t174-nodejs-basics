@@ -1,1 +1,2 @@
-console.log('Hi there!')
+const name = 'Bardock';
+console.log(`Hello ${ name }, welcome!`);
