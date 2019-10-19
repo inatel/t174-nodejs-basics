@@ -1,8 +1,7 @@
-const number = process.argv.slice(2)
+const numbers = process.argv.slice(2)
 let total = 0;
 
-for(let i =0; i<number.length; i++) {
-    total += Number(number[i]);
-}
+const sum = number => total += Number(number);
+numbers.forEach(sum);
 
 console.log(`The sum is: ${ total }`);
