@@ -1,6 +1,8 @@
-let numberA = 11;
-let numberB = 31;
+const number = process.argv.slice(2)
+let total = 0;
 
-const total = numberA + numberB;
+for(let i =0; i<number.length; i++) {
+    total += Number(number[i]);
+}
 
 console.log(`The sum is: ${ total }`);
