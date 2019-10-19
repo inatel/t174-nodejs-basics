@@ -1,6 +1,15 @@
-const timer = 1000;
-const task = () => console.log('An operation just happened!');
+function operation1() {
+  console.log('Operation 1');
+}
 
-setTimeout(task, timer);
+function operation2() {
+  setTimeout(() => console.log('Operation 2'), 5000);
+}
 
-console.log('Is it ended?');
+function operation3() {
+  console.log('Operation 3');
+}
+
+operation1();
+operation2();
+operation3();
