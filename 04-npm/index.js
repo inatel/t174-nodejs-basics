@@ -8,17 +8,15 @@ const names = [
   'André Luiz Oneti Carvalho'
 ]
 
-const byAlphabeticalOrder = (wordA, wordB) => 
+const byAlphabeticalOrder = (wordA, wordB) =>
   ('' + wordA).localeCompare(wordB);
 
 const print = (name, index) => {
-  const isEven = index % 2;
-  if(isEven) {
-    console.log(chalk.default.yellow(name));
-  } else {
-    console.log(chalk.default.blueBright(name));
-  }
-} 
+  const colors = ['yellow', 'blueBright', 'red'];
+  const colorIndex = index % colors.length;
+  const color = colors[colorIndex];
+  console.log(chalk[color](name));
+}
 
 names
   .sort(byAlphabeticalOrder)
