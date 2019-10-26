@@ -11,8 +11,14 @@ const names = [
 const byAlphabeticalOrder = (wordA, wordB) => 
   ('' + wordA).localeCompare(wordB);
 
-const print = name => 
-  console.log(chalk.default.blue(name));
+const print = (name, index) => {
+  const isEven = index % 2;
+  if(isEven) {
+    console.log(chalk.default.yellow(name));
+  } else {
+    console.log(chalk.default.blueBright(name));
+  }
+} 
 
 names
   .sort(byAlphabeticalOrder)
