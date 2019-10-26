@@ -1,12 +1,14 @@
 const http = require('http');
 const fs = require('fs');
 
-const host = '10.0.239.20';
-const port = 80;
+const host = 'localhost';
+const port = 3000;
 
 function requestHandler(request, response) {
   console.log(request.url);
-  response.end('Hi there! The server is up!');
+  fs.readFile('./index.html', 'utf8', (error, html) => {
+    response.end(html);
+  });
 }
 
 http.createServer(requestHandler)
