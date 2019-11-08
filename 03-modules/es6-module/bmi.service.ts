@@ -1,9 +1,5 @@
-const scale = 1;
-
 export class BMIService {
-  static getIndex(weight, height) {
+  static getIndex(weight: number, height: number) {
     return weight / (height * height);
   }
 }
-
-export const gender = 'unknown';
